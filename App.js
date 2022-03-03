@@ -1,10 +1,14 @@
 import React from 'react';
 import {Button, SafeAreaView} from 'react-native';
-import ToastModule from './Toast';
+import Alert from './Alert';
 
 function App() {
   const onPress = () => {
-    ToastModule.show('Android Toast in React Native', ToastModule.SHORT);
+    Alert.alert('Hello World');
+    console.log({
+      string: Alert.STRING_VALUE,
+      number: Alert.NUMBER_VALUE,
+    });
   };
   return (
     <SafeAreaView>
